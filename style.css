@@ -16,6 +16,14 @@ h1 {
 
 }
 
+#submitButton {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
 form {
     text-align: center;
 }
