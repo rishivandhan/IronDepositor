@@ -1,0 +1,21 @@
+body{
+    background-image: url('background3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(226, 204, 204, 0.5);
+}
+
+h1.first-use{
+    font-size: 2em;
+    text-align: center;
+    
+}
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+form {
+    text-align: center;
+}

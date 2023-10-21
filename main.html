@@ -1,9 +1,69 @@
 <!DOCTYPE html>
+<html>
 <head>
+    <link rel = "Stylesheet" href ="style.css">
     <title> Iron Depositor </title>
+
 
 </head>
 
 <body>
-    <p>Hello world</p>
+
+
+<script src="Main.js"></script>
+
+
+
+<h1 class ="first-use"> Iron Depositor</h1>
+<!-- this is the form to put boat ID and password-->
+<form>
+    <label for="boatID">Boat ID:</label>
+    <input type="text" id="boatID" name="boatID"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <input type="submit" id = "submitButton" value="Submit">
+</form>
+
+<script> 
+    // This method will store and get prototype boat id values
+    function getBoatIdValues() {
+        var boatId = "Boat1"
+        var boatPassword = "Boat1"
+        return {boatId, boatPassword};
+    }
+
+    /* 
+    * This will check if input values are correct.
+    * If correct, it will go to the next html page; 
+    * otherwise, it will give alert the values are incorrect. 
+    */ 
+
+    function checkIdValues() {
+        const valuesChecked = false;
+        var idValues = getBoatIdValues();
+        if ( (document.getElementById("boatID").innerHTML == idValues.boatId) && 
+        (document.getElementById("password").innerHTML == idValues.boatPassword)) {
+            valuesChecked = true; 
+        }
+
+        return valuesChecked;
+    }
+
+    // Event handler method for the submit
+    document.getElementById("submitButton").addEventListener("click", function() {
+            if(checkIdValues()) {
+                // this will go to Tracker.html if true
+                location.href = "Tracker.html";
+            } else {
+                // This will make an alert message when values are incorrect
+                alert("Incorrect Boat Id and/or Password");
+            }
+        });
+</script>
+
 </body>
+
+</html>
+
