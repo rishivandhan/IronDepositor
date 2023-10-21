@@ -16,13 +16,7 @@ h1 {
 
 }
 
-#submitButton {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
 
-}
 
 form {
     text-align: center;
@@ -32,5 +26,11 @@ form {
 #map {
     height: 400px; /* Adjust the height as needed */
     width: 100%; /* Set the width to fill the container */
-  }
+}
+
+
+button#submitButton {
+    display: block;
+    margin: auto;
+}
   
