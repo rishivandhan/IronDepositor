@@ -36,23 +36,63 @@
     <p id="locationResult"></p>
     <p id="ironLevelResult"></p>
 
-    <script>
+    <button id = "openonmaps">Open on Maps</button>
+    <button id = "logout"> LogOut</button>
+    
 
+    <script>
+        
         // This method creates longitude and latitude randomly
+
+        function getRandomFloat(min, max){
+            return Math.random() * (max - min) + min;
+        }
+
         function generateRandomCoordinates() {
-            var latitude = (Math.random() * 180 - 90).toFixed(6);
-            var longitude = (Math.random() * 360 - 180).toFixed(6);
-            var ironLevel = Math.random() * 100;
+            var latitude = getRandomFloat(0,60);
+            var longitude = getRandomFloat(-80,-20);
+            var ironLevel = Math.floor(Math.random() * 100) + 1;
             return { latitude, longitude, ironLevel };
         }
 
+
+        function logout(){
+
+          
+        }
+
+        var coordinates = generateRandomCoordinates();
         // Event handler method for the location
         document.getElementById("locationButton").addEventListener("click", function() {
-            var coordinates = generateRandomCoordinates();
+            
             document.getElementById("locationResult").innerHTML = "Latitude: " + coordinates.latitude + "<br>Longitude: " + coordinates.longitude;
-            document.getElementById("ironLevelResult").innerHTML = "Iron Level: " + coordinates.ironLevel;
-            document.getElementById("ironLevelResult").innerHTML = "Iron Level: " + coordinates.ironLevel;
+            document.getElementById("ironLevelResult").innerHTML = "Iron Capacity Percentage: " + coordinates.ironLevel + "%";
+            
         });
+
+        //opening on maps
+        document.getElementById("openonmaps").addEventListener("click", function(){
+            
+            const url = `https://www.google.com/maps?q=${coordinates.latitude},${coordinates.longitude}`;
+            window.open(url, '_blank');
+        });
+
+        document.getElementById("logout").addEventListener("click", function(){
+            latitude = 0;
+            longitude = 0;
+            ironLevel = 0;
+            window.location.href = 'main.html';
+
+
+        });
+
+
+
+
     </script>
+
+    
+
+    
 </body>
 </html>

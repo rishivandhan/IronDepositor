@@ -14,7 +14,7 @@
 
 
 
-<h1 class ="first-use"> Iron Depositor</h1>
+<h1 class ="first-use"> Iron Deposinator</h1>
 <!-- this is the form to put boat ID and password-->
 <form>
     <label for="boatID">Boat ID:</label>
@@ -41,10 +41,10 @@
     */ 
 
     function checkIdValues() {
-        const valuesChecked = false;
+        const valuesChecked = true;
         var idValues = getBoatIdValues();
-        if ( (document.getElementById("boatID").innerHTML == idValues.boatId) && 
-        (document.getElementById("password").innerHTML == idValues.boatPassword)) {
+        if ( (document.getElementById("boatID").innerHTML.toString().equals(idValues.boatId) ) && 
+        (document.getElementById("password").innerHTML.toString().equals(idValues.boatPassword) )) {
             valuesChecked = true; 
         }
 

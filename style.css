@@ -19,3 +19,10 @@ h1 {
 form {
     text-align: center;
 }
+
+
+#map {
+    height: 400px; /* Adjust the height as needed */
+    width: 100%; /* Set the width to fill the container */
+  }
+  
